@@ -1,0 +1,88 @@
+        <footer id="footer">
+            <div class="footer-container">
+                <article class="footer-wrapper">
+                    <section class="mail-div">
+                        <h2 class="question-title">{{ questions }}</h2>
+                        <ul>
+                            <li><i class="far fa-envelope"></i> magnusbolljensen@bollsjen.dk</li>
+                            <li class="under-text">{{ reply }}</li>
+                        </ul>                    
+                    </section>
+                    <section class="find-spots">
+                        <h3>{{ otherSitesTitle }}</h3>
+                        <ul>
+                            <a href="https://gupasoftware.dk/" target="_blanc"><li class="footer-btn"><i class="fas fa-briefcase"></i>GUPA Software</li></a>
+                            <a href="https://skimspots.com/" target="_blanc"><li class="footer-btn"><i class="fas fa-umbrella-beach"></i>Skimspots.com</li></a>
+                        </ul>
+                    </section>
+                    <section class="links">
+                        <h3>{{ socialMedia }}</h3>
+                        <ul>
+                            <a href="https://www.youtube.com/c/Bollsjen" target="_blanc"><li class="footer-btn"><i class="fab fa-youtube"></i>YouTube</li></a>
+                            <a href="https://www.instagram.com/bollsjen_/" target="_blanc"><li class="footer-btn"><i class="fab fa-instagram"></i>Instagram</li></a>
+                            <a href="https://www.tiktok.com/@bollsjen" target="_blanc"><li class="footer-btn"><i class="fab fa-tiktok"></i>Tik Tok</li></a>
+                            <a href="https://www.twitch.tv/bollsjen_" target="_blanc"><li class="footer-btn"><i class="fab fa-twitch"></i>Twitch</li></a>
+                        </ul>
+                    </section>
+                    <section class="new-content">
+                        <h3>{{ otherContent }}</h3>
+                        <ul>
+                            <a href="/store"><li class="footer-btn"><i class="fas fa-store"></i>{{ storeText }}</li></a>
+                            <?php if(isset($_SESSION['login_ID'])){ 
+                                ?> 
+                                <a href="/admin"><li class="footer-btn"><i class="fas fa-tachometer-alt"></i>Dashboard</li></a>
+                                <a href="/logout"><li class="footer-btn"><i class="fas fa-sign-in-alt"></i>Logout</li></a> 
+                                <?php
+                            } else{
+                                ?>
+                                <a href="/login"><li class="footer-btn"><i class="fas fa-sign-out-alt"></i>{{ loginText }}</li></a>
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                    </section>
+                    <section class="creater">
+                        <div class="line">
+                            <hr/>
+                        </div>                    
+                        <div class="bottom-text-powered">
+                            <ul>
+                                <li>{{ poweredBy }} <a href="https://gupasoftware.dk/" target="_blanc">GUPA Software</a> ©2017-<?php echo date("Y"); ?></li>
+                            </ul>
+                        </div>
+                        <div class="bottom-text-useful">
+                            <ul>
+                                <li><a href="/privacy-policy/">{{ privacy }}</a> {{ and }} <a href="/skimspotsV4/terms-and-conditions/">{{ terms }}</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            const navbarApp = Vue.createApp({
+                data(){
+                    return <?php echo $data['navbarLang']; ?>                    
+                }
+            })
+            navbarApp.mount('#navbar')
+
+            const contentpp = Vue.createApp({
+                data(){
+                    return <?php echo $data['contentLang']; ?>                    
+                }
+            })
+            contentpp.mount('#content')
+
+            const footerApp = Vue.createApp({
+                data(){
+                    return <?php echo $data['footerLang']; ?>                    
+                }
+            })
+            footerApp.mount('#footer')
+        </script>
+        <script src="/js/lang-change.js"></script>
+        <script src="/js/top-navbar-animate.js"></script>
+    </body>
+</html>

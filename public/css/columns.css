@@ -1,0 +1,59 @@
+.col-1 {
+    grid-column: span 1;
+    transition: all ease 300ms;
+}
+
+.col-2 {
+    grid-column: span 2;
+    transition: all ease 300ms;
+}
+
+.col-3 {
+    grid-column: span 3;
+    transition: all ease 300ms;
+}
+
+.col-4 {
+    grid-column: span 4;
+    transition: all ease 300ms;
+}
+
+.col-5 {
+    grid-column: span 5;
+    transition: all ease 300ms;
+}
+
+.col-6 {
+    grid-column: span 6;
+    transition: all ease 300ms;
+}
+
+.col-7 {
+    grid-column: span 7;
+    transition: all ease 300ms;
+}
+
+.col-8 {
+    grid-column: span 8;
+    transition: all ease 300ms;
+}
+
+.col-9 {
+    grid-column: span 9;
+    transition: all ease 300ms;
+}
+
+.col-10 {
+    grid-column: span 10;
+    transition: all ease 300ms;
+}
+
+.col-11 {
+    grid-column: span 11;
+    transition: all ease 300ms;
+}
+
+.col-12 {
+    grid-column: span 12;
+    transition: all ease 300ms;
+}

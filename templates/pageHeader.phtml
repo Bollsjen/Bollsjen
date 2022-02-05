@@ -1,0 +1,56 @@
+<?php
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollsjen.dk</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/blogs-list.css" />
+    <link rel="stylesheet" href="/css/games-list.css" />
+    <link rel="stylesheet" href="/css/games.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <link rel="stylesheet" href="/css/grid-rows.css" />
+    <link rel="stylesheet" href="/css/flexbox-grid.css" />
+    <link rel="stylesheet" href="/css/columns.css" />
+    <link rel="stylesheet" href="/css/rows.css" />
+    <link rel="stylesheet" href="/css/flex-column.css" />
+
+    <link rel="stylesheet" href="/css/cards.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+
+    <link rel="stylesheet" href="/css/blog-posts-list.css" />
+    <link rel="stylesheet" href="/css/blog-posts.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-top" id="navbar">
+        <div class="navbar-container">
+            <a href="/"><span>{{ navbarHome }}</span><span class="navbar-hover-slider"></span></a>
+            <a href="/blogs"><span>{{ navbarBlogs }}</span><span class="navbar-hover-slider"></span></a>
+            <a href="/games"><span>{{ navbarGames }}</span><span class="navbar-hover-slider"></span></a>
+            <a href="/contact"><span>{{ navbarContact }}</span><span class="navbar-hover-slider"></span></a>
+            <a href="/about"><span>{{ navbarAbout }}</span><span class="navbar-hover-slider"></span></a>
+            <div class="lang-dropdown">
+                <button class="lang-dropdown-btn"><img class="lang-icon" src="/images/icons/<?php if(isset($_SESSION['lang'])) { if($_SESSION['lang'] == "da"){ echo "denmark.png"; }else if($_SESSION['lang'] == "en"){ echo "united-kingdom.png"; } }else {echo "denmark.png";} ?>" /></button>
+                <div class="lang-dropdown-content">
+                    <img class="lang-icon" src="/images/icons/denmark.png" lang-btn="da">
+                    <img class="lang-icon" src="/images/icons/united-kingdom.png" lang-btn="en">
+                </div>
+            </div>
+        </div>
+    </nav>
+    
